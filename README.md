@@ -8,3 +8,6 @@ and returns an accuracy of 80%.
 To run the code, simply change the path set in the beginning of the code to train and test folder path.
 The training set images are seperated in folders for blurred and non-blurred.
 The test images are tagged in an Excel file.
+
+--------------------------------------------------------------------------------------------------------------
+Added pure Laplacian blur detection at threshold = 400 for benchmarking, returns 69% accuracy
