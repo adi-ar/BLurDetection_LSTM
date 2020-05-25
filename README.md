@@ -1,4 +1,15 @@
-This method focuses on detecting image blur from an out-ofsample set of images consisting of in-focus non-blurred images and motion blurred images (basically seperating intentional blur from unintentional, actual blurred images). The novel process applies Laplacian operator
+This method focuses on detecting image blur from an out-ofsample set of images consisting of in-focus non-blurred images and motion blurred images (basically seperating intentional blur from unintentional, actual blurred images). 
+
+For example, the below image is an out-of-focus image, with object of interest in focus:
+![image](out_of_focus0007.jpg)
+
+And the below image is a truly blurred image:
+![image](MotionL100Th45_1.jpg)
+
+Both images will be classified as blurred with a classical Gaussian method.
+
+
+The novel process applies Laplacian operator
 over a set of salient objects in an image, which extract a set of image features, and subsequently classifying the blur and nonblur images using Long Short-Term Memory model (LSTM).
 The LSTM treats each salient contour varying in x and y axis of an image as a timestep to classify the images. Our method recognizes the imperfections in the saliency detection
 algorithms, and incorporates the position, size, and relative blur value of each of the contours to define the image. 
